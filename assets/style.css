@@ -1,0 +1,195 @@
+/**
+ * Base styles
+ */
+:root {
+  --space: 16px;
+  --radius: 6px;
+  --container-width: 50rem;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/*
+ * This makes all elements size based on their width/height + their border.
+ */
+* {
+  box-sizing: border-box;
+}
+
+/*
+ * Remove all margin and padding from html and body tag.
+ * And make html and body tag fill the full height.
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.content-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--container-width);
+}
+
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #e4e4e4;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 64px;
+  background-color: #f6f3f4;
+  color: #62748E;
+}
+
+.app-footer a {
+  color: #62748E;
+}
+
+.app-footer a:hover {
+  color: #1D293D;
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
+}
+
+.app-navigation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space);
+  background-color: #1e2939;
+  height: 48px;
+  max-width: var(--container-width);
+  border-radius: var(--radius);
+  margin: 6px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 25%), 0 2px 4px -2px rgb(0 0 0 / 25%);
+}
+
+.nav-item {
+  padding: 8px 12px;
+  color: #d1d5dc;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+}
+
+.nav-item:hover {
+  color: #ffffff;
+  background-color: #364153;
+}
+
+.nav-item:active,
+.nav-item.active,
+.nav-item:focus {
+  color: #ffffff;
+  background-color: #364153;
+}
+
+
+/**
+ * Dashboard styles
+ */
+.stats-row {
+  display: flex;
+  justify-content: stretch;
+  gap: var(--space);
+  margin-bottom: var(--space);
+}
+
+.stats-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 15%), 0 2px 4px -2px rgb(0 0 0 / 15%);
+  font-family: var(--font-sans);
+}
+
+.stats-card .stat {
+  display: flex;
+  gap: var(--space);
+  align-items: center;
+  padding: 0 8px;
+}
+
+.stats-card .icon {
+  width: 64px;
+  height: 64px;
+}
+
+.stats-card .value {
+  font-size: 64px;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.stats-card .details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px 8px;
+  font-size: 18px;
+}
+
+.stats-card .link a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.stats-card .link a:hover {
+  background: rgba(2, 6, 24, 0.2);
+}
+
+
+.stats-card--neutral {
+  background-color: #F1F5F9;
+  color: #1d293d;
+}
+.stats-card--neutral svg {
+  fill: #1d293d;
+}
+
+.stats-card--warning {
+  background-color: #ffd6a7;
+  color: #9f2d00;
+}
+.stats-card--warning svg {
+  fill: #9f2d00;
+}
+
+.stats-card--danger {
+  background-color: #ffc9c9;
+  color: #82181a;
+}
+.stats-card--danger svg {
+  fill: #82181a;
+}
+
+.stats-card--success {
+  background-color: #dcfce7;
+  color: #0d542b;
+}
+.stats-card--success svg {
+  fill: #0d542b;
+}
